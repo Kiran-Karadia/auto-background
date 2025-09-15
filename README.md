@@ -1,0 +1,2 @@
+- Simple bash script to get an image from Unsplash and set it as the background
+- Written to run as a cron job
