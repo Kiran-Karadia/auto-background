@@ -1,11 +1,14 @@
 #!/bin/bash
+if [ -f .env ]; then
+	export $(cat .env)
+fi
+
 WALLPAPER_DIR="$HOME/Pictures/DailyWallpapers"
 mkdir -p "$WALLPAPER_DIR"
 
 KEYWORDS="nature"
 WIDTH="2560"
 HEIGHT="1440"
-API_KEY="<>"
 API_URL="https://api.unsplash.com"
 API_VERSION="v1"
 
