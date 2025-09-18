@@ -1,8 +1,11 @@
 #!/bin/bash
-if [ -f .env ]; then
-	export $(cat .env)
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+if [ -f "$SCRIPT_DIR/.env" ]; then
+	export $(cat "$SCRIPT_DIR/.env" )
 fi
 
+echo "Outputting API KEY"
+echo $API_KEY
 WALLPAPER_DIR="$HOME/Pictures/DailyWallpapers"
 mkdir -p "$WALLPAPER_DIR"
 
